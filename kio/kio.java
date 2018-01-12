@@ -29,7 +29,7 @@ public class kio extends AdvancedRobot
 
 	public void onScannedRobot(ScannedRobotEvent e) 
 	{
-    	// Установите радар, чтобы он следил за вражеским ботом
+    	// Установливаем радар, чтобы он следил за вражеским ботом
     	setTurnRadarRightRadians(Utils.normalRelativeAngle(e.getBearingRadians() + getHeadingRadians() - getRadarHeadingRadians()));
 		setTurnGunRightRadians(Utils.normalRelativeAngle(e.getBearingRadians() + getHeadingRadians() - getGunHeadingRadians()));
 
