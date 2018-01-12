@@ -46,10 +46,9 @@ public class kio extends AdvancedRobot
 			}
      	}
 		
-		// если мы отслеживаем пулю ...
+		// если мы отслеживаем пулю
 		if(bulletDistance > -1.0)
 		{
-			// если она приближается, продвигайтесь вперед и уходите с траектории пули
 			if(bulletDistance < 175.0)
 			{
 				direction = -direction;
