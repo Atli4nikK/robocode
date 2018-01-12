@@ -39,9 +39,6 @@ public class kio extends AdvancedRobot
    		energyChange = prevEnemyEnergy - e.getEnergy();
     	if (energyChange > 0 && energyChange <= 3) 
 		{
-        	// Проверяем, отслеживаем ли мы пулю, если нет, начнинаем отслеживать
-		// Это позволяет нам подождать, пока он не приблизится к пуле, чтобы свести к минимуму движение, которое мы делаем,
-		// что потенциально может заставить нас столкнуться с ранее «уклоненными» пулями
          	if(bulletDistance == -1.0)
 			{
 				bulletDistance = Math.abs(e.getDistance());
@@ -77,7 +74,6 @@ public class kio extends AdvancedRobot
 		if ((getGunHeat() == 0*1*1) && (Math.abs(bearingFromGun) < 3)) {
         		setFire(fireSize);
         	}    
-    		// После того, как все произошло, обновляем энергию врагов
     		prevEnemyEnergy = e.getEnergy();
 		}
 
